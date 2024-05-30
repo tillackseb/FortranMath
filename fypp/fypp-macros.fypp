@@ -1,0 +1,44 @@
+#: mute
+
+#! =============================================================================
+#! GLOBAL FYPP VARIABLES
+#! -----------------------------------------------------------------------------
+#! numerical data types and ranks
+#: set INTEGER_TYPES = &
+    [ &
+      {'type':'integer', 'kind':'int32', 'name':'integer32'}, &
+      {'type':'integer', 'kind':'int64', 'name':'integer64'}, &
+    ]
+#: set REAL_TYPES = &
+    [ &
+      {'type':'real', 'kind':'real32', 'name':'real32'}, &
+      {'type':'real', 'kind':'real64', 'name':'real64'}, &
+    ]
+#: set COMPLEX_TYPES = & 
+    [ &
+      {'type':'complex', 'kind':'real32', 'name':'complex32'}, &
+      {'type':'complex', 'kind':'real64', 'name':'complex64'} &
+    ]
+#: set ALL_NUMERICAL_TYPES = INTEGER_TYPES + REAL_TYPES + COMPLEX_TYPES
+#: set TYPES = ['integer',    'integer', 'real', 'real', 'complex', 'complex']
+#: set KINDS = ['int32',      'int64', 'real32', 'real64', 'real32', 'real64']
+#: set NAMES = ['integer32',  'integer64', 'real32', 'real64', 'complex32', 'complex64']
+#! =============================================================================
+
+#! =============================================================================
+#! FYPP GENERATED HEADER
+#! -----------------------------------------------------------------------------
+#: def FYPP_HEADER()
+!FYPP HEADER====================================================================
+!
+! INFORMATION
+! This file has been created by the fypp preprocessor. DO NOT MODIFY THIS FILE!
+! Implement changes in the original preprocessed file.
+! original file ::       ${_FILE_}$
+! preprocessing time ::  ${time.strftime('%Y-%m-%d %H:%M:%S UTC%z')}$
+!
+!END FYPP HEADER================================================================
+#: enddef FYPP_HEADER
+#! =============================================================================
+
+#: endmute

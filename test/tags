@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+array_generators_test	array-math/generators/generators-test.f90	/^module array_generators_test$/;"	m
+check	check.f90	/^program check$/;"	p
+collect	array-math/generators/generators-test.f90	/^  subroutine collect(/;"	s	module:array_generators_test
+fmt	main.f90	/^  character(len=*), parameter :: fmt /;"	v	program:tester
+identity_complex32_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_complex32_test(/;"	s	module:m_identity_test
+identity_complex64_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_complex64_test(/;"	s	module:m_identity_test
+identity_integer32_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_integer32_test(/;"	s	module:m_identity_test
+identity_integer64_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_integer64_test(/;"	s	module:m_identity_test
+identity_real32_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_real32_test(/;"	s	module:m_identity_test
+identity_real64_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_real64_test(/;"	s	module:m_identity_test
+is	main.f90	/^  integer :: is,/;"	v	program:tester
+m_identity_test	array-math/generators/identity-test_fypp.f90	/^module m_identity_test$/;"	m
+stat	main.f90	/^  integer :: is, stat$/;"	v	program:tester
+test_identity	array-math/generators/generators-test.f90	/^  subroutine test_identity(/;"	s	module:array_generators_test
+tester	main.f90	/^program tester$/;"	p
+testsuites	main.f90	/^  type(testsuite_type), allocatable :: testsuites(/;"	v	program:tester
