@@ -20,9 +20,6 @@
       {'type':'complex', 'kind':'real64', 'name':'complex64'} &
     ]
 #: set ALL_NUMERICAL_TYPES = INTEGER_TYPES + REAL_TYPES + COMPLEX_TYPES
-#: set TYPES = ['integer',    'integer', 'real', 'real', 'complex', 'complex']
-#: set KINDS = ['int32',      'int64', 'real32', 'real64', 'real32', 'real64']
-#: set NAMES = ['integer32',  'integer64', 'real32', 'real64', 'complex32', 'complex64']
 #! =============================================================================
 
 #! =============================================================================

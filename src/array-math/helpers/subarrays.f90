@@ -48,21 +48,20 @@ contains
 
   !> Compute indices of elements in flattened `A` that form a subarray `B` within `A`.
   !>
-  !> Let `A` be an array of arbitray. Let `B` be an array of the same rank
-  !> that is fully contained within `A`, i.e., `all( shapeB <= shapeA ) = .true.`.
-  !> Then this routines returns the indices of all elements of `A` that are in `B`.
+  !> Let `A` be an array of arbitray. Let `B` be an array of the same rank that is fully contained within 
+  !> `A`, i.e., `all( shapeB <= shapeA ) = .true.`. Then this routines returns the indices of all elements 
+  !> of `A` that are in `B`.   
   !> Indices correspond to flattened array `A`.  
-  !> Optionally, an offset can be provided that specifies the position of the fist
-  !> element of `B` within `A`. In that case the containment condition reads
-  !> `all( shapeB + offset - 1 <= shapeA )`.  
-  !> If the containment condition is violated, the function will return an 
-  !> unallocated array.
+  !> Optionally, an offset can be provided that specifies the position of the fist element of `B` within 
+  !> `A`. In that case the containment condition reads `all( shapeB + offset - 1 <= shapeA )`.  
+  !> If the containment condition is violated, the function will return an array of size 0.
   pure function subarray_in_flattened( shapeA, shapeB, offset ) result( sub )
     !> shape of outer array `A`
     integer, intent(in) :: shapeA(:)
     !> shape of inner array `B`
     integer, intent(in) :: shapeB(size(shapeA))
-    !> indices of first element of `B` within `A` (default: first element of `A`)
+    !> indices of first element of `B` within `A`   
+    !> default: first element of `A`
     integer, optional, intent(in) :: offset(size(shapeA))
     !> indices of elements in `A` that form `B`
     integer, allocatable :: sub(:)
@@ -84,29 +83,29 @@ contains
         sub(i) = index_to_flattened( shapeA, idxA )
       end do
       deallocate( idxA, idxB )
+    else
+      allocate( sub(0) )
     end if
     deallocate( off )
   end function subarray_in_flattened
 
-  !> Compute indices of elements in flattened `A` that form the main diagonal
-  !> of a subarray `B` within `A`.
+  !> Compute indices of elements in flattened `A` that form the main diagonal of a subarray `B` within 
+  !> `A`.
   !>
-  !> Let `A` be an array of arbitray. Let `B` be an array of the same rank
-  !> that is fully contained within `A`, i.e., `all( shapeB <= shapeA ) = .true.`.
-  !> Then this routines returns the indices of all elements of `A` that are on
-  !> the main diagonal of `B`.  
+  !> Let `A` be an array of arbitray. Let `B` be an array of the same rank that is fully contained within 
+  !> `A`, i.e., `all( shapeB <= shapeA ) = .true.`. Then this routines returns the indices of all elements 
+  !> of `A` that are on the main diagonal of `B`.  
   !> Indices correspond to flattened array `A`.  
-  !> Optionally, an offset can be provided that specifies the position of the fist
-  !> element of `B` within `A`. In that case the containment condition reads
-  !> `all( shapeB + offset - 1 <= shapeA )`.  
-  !> If the containment condition is violated, the function will return an 
-  !> unallocated array.
+  !> Optionally, an offset can be provided that specifies the position of the fist element of `B` within 
+  !> `A`. In that case the containment condition reads `all( shapeB + offset - 1 <= shapeA )`.  
+  !> If the containment condition is violated, the function will return an array of size 0.
   pure function diagonal_in_flattened( shapeA, shapeB, offset ) result( sub )
     !> shape of outer array `A`
     integer, intent(in) :: shapeA(:)
     !> shape of inner array `B`
     integer, intent(in) :: shapeB(size(shapeA))
-    !> indices of first element of `B` within `A` (default: first element of `A`)
+    !> indices of first element of `B` within `A`   
+    !> default: first element of `A`
     integer, optional, intent(in) :: offset(size(shapeA))
     !> indices of elements in `A` that form `B`
     integer, allocatable :: sub(:)
@@ -127,23 +126,11 @@ contains
         sub(i) = index_to_flattened( shapeA, idxA )
       end do
       deallocate( idxA )
+    else
+      allocate( sub(0) )
     end if
     deallocate( off )
   end function diagonal_in_flattened
-
-  !> Compute distance between elements on main diagonal of an arbitray rank array.
-  pure recursive function diagonal_distance( shapeA ) result( dist )
-    !> shape of array
-    integer, intent(in) :: shapeA(:)
-    !> distance between elements on main diagonal
-    integer :: dist
-
-    if (size( shapeA ) == 1) then
-      dist = 1
-    else
-      dist = 1 + shapeA(1)*diagonal_distance( shapeA(2:) )
-    end if
-  end function diagonal_distance
 
 end module m_subarrays
 

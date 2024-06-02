@@ -5,7 +5,7 @@ module m_identity
   implicit none
   private
   
-  public :: identity, to_identity
+  public :: identity, fill_identity
 
   !> description
   interface identity
@@ -18,10 +18,10 @@ module m_identity
   end interface identity
 
   !> description
-  interface to_identity
+  interface fill_identity
     module procedure :: identity_integer32, identity_real32, identity_complex32
     module procedure :: identity_integer64, identity_real64, identity_complex64
-  end interface to_identity
+  end interface fill_identity
 
 contains
 

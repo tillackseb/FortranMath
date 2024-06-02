@@ -3,14 +3,14 @@
 !>## List of Procedures
 !>{!./array_generators.md!}
 module array_generators
-  use m_identity, only : identity, to_identity, &
-    eye => identity, to_eye => to_identity
-  !use m_random, only : random, to_random, &
-  !  rand => random, to_rand => to_random
+  use m_identity, only : identity, fill_identity, &
+    eye => identity, to_eye => fill_identity
+  use m_random, only : random, fill_random, &
+    rand => random, to_rand => fill_random
   implicit none
   private
 
-  public :: identity, eye, to_identity, to_eye
-  !public :: random, rand, to_random, to_rand
+  public :: identity, eye, fill_identity, to_eye
+  public :: random, rand, fill_random, to_rand
 end module array_generators
 

@@ -16,7 +16,15 @@ identity_real32_test	array-math/generators/identity-test_fypp.f90	/^  subroutine
 identity_real64_test	array-math/generators/identity-test_fypp.f90	/^  subroutine identity_real64_test(/;"	s	module:m_identity_test
 is	main.f90	/^  integer :: is,/;"	v	program:tester
 m_identity_test	array-math/generators/identity-test_fypp.f90	/^module m_identity_test$/;"	m
+m_random_test	array-math/generators/random-test_fypp.f90	/^module m_random_test$/;"	m
+random_complex32_test	array-math/generators/random-test_fypp.f90	/^  subroutine random_complex32_test(/;"	s	module:m_random_test
+random_complex64_test	array-math/generators/random-test_fypp.f90	/^  subroutine random_complex64_test(/;"	s	module:m_random_test
+random_integer32_test	array-math/generators/random-test_fypp.f90	/^  subroutine random_integer32_test(/;"	s	module:m_random_test
+random_integer64_test	array-math/generators/random-test_fypp.f90	/^  subroutine random_integer64_test(/;"	s	module:m_random_test
+random_real32_test	array-math/generators/random-test_fypp.f90	/^  subroutine random_real32_test(/;"	s	module:m_random_test
+random_real64_test	array-math/generators/random-test_fypp.f90	/^  subroutine random_real64_test(/;"	s	module:m_random_test
 stat	main.f90	/^  integer :: is, stat$/;"	v	program:tester
 test_identity	array-math/generators/generators-test.f90	/^  subroutine test_identity(/;"	s	module:array_generators_test
+test_random	array-math/generators/generators-test.f90	/^  subroutine test_random(/;"	s	module:array_generators_test
 tester	main.f90	/^program tester$/;"	p
 testsuites	main.f90	/^  type(testsuite_type), allocatable :: testsuites(/;"	v	program:tester

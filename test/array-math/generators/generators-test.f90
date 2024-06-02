@@ -4,8 +4,8 @@ module array_generators_test
   use testdrive, only : error_type, check
 
   use array_generators, only : &
-    identity, to_identity! &
-    !andom, to_random
+    identity, fill_identity, &
+    random, fill_random
 
   implicit none
   private
@@ -22,7 +22,8 @@ contains
 
     ! add new tests here
     testsuite = [ &
-      new_unittest( 'identity', test_identity ) &
+      new_unittest( 'identity', test_identity ), &
+      new_unittest( 'random matrix', test_random ) &
     ]
   end subroutine collect
 
@@ -34,6 +35,24 @@ contains
 
     call identity_integer32_test( error )
     call identity_integer64_test( error )
+    call identity_real32_test( error )
+    call identity_real64_test( error )
+    call identity_complex32_test( error )
+    call identity_complex64_test( error )
   end subroutine test_identity
+  
+  !> Test module [[m_random(module)]].
+  subroutine test_random( error )
+    use m_random_test
+    !> error handling
+    type(error_type), allocatable, intent(out) :: error
+
+    call random_integer32_test( error )
+    call random_integer64_test( error )
+    call random_real32_test( error )
+    call random_real64_test( error )
+    call random_complex32_test( error )
+    call random_complex64_test( error )
+  end subroutine test_random
   
 end module array_generators_test

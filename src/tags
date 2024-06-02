@@ -23,8 +23,13 @@ ZERO_INTEGER64	math-constants.f90	/^  integer(kind=int64), parameter    :: ZERO_
 ZERO_REAL32	math-constants.f90	/^  real(kind=real32), parameter      :: ZERO_REAL32 /;"	v	module:math_constants
 ZERO_REAL64	math-constants.f90	/^  real(kind=real64), parameter      :: ZERO_REAL64 /;"	v	module:math_constants
 array_generators	array-math/generators/array-generators.f90	/^module array_generators$/;"	m
-diagonal_distance	array-math/helpers/subarrays.f90	/^  pure recursive function diagonal_distance(/;"	f	module:m_subarrays
 diagonal_in_flattened	array-math/helpers/subarrays.f90	/^  pure function diagonal_in_flattened(/;"	f	module:m_subarrays
+fill_random_complex32	array-math/generators/random_fypp.f90	/^  subroutine fill_random_complex32(/;"	s	module:m_random_templates
+fill_random_complex64	array-math/generators/random_fypp.f90	/^  subroutine fill_random_complex64(/;"	s	module:m_random_templates
+fill_random_integer32	array-math/generators/random_fypp.f90	/^  subroutine fill_random_integer32(/;"	s	module:m_random_templates
+fill_random_integer64	array-math/generators/random_fypp.f90	/^  subroutine fill_random_integer64(/;"	s	module:m_random_templates
+fill_random_real32	array-math/generators/random_fypp.f90	/^  subroutine fill_random_real32(/;"	s	module:m_random_templates
+fill_random_real64	array-math/generators/random_fypp.f90	/^  subroutine fill_random_real64(/;"	s	module:m_random_templates
 identity_complex32	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_complex32(/;"	s	module:m_identity_templates
 identity_complex64	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_complex64(/;"	s	module:m_identity_templates
 identity_integer32	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_integer32(/;"	s	module:m_identity_templates
@@ -53,8 +58,34 @@ index_from_flattened	array-math/helpers/subarrays.f90	/^  pure function index_fr
 index_to_flattened	array-math/helpers/subarrays.f90	/^  pure function index_to_flattened(/;"	f	module:m_subarrays
 m_identity	array-math/generators/identity.f90	/^module m_identity$/;"	m
 m_identity_templates	array-math/generators/identity_fypp.f90	/^module m_identity_templates$/;"	m
+m_random	array-math/generators/random.f90	/^module m_random$/;"	m
+m_random_templates	array-math/generators/random_fypp.f90	/^module m_random_templates$/;"	m
 m_subarrays	array-math/helpers/subarrays.f90	/^module m_subarrays$/;"	m
 math_constants	math-constants.f90	/^module math_constants$/;"	m
 math_utils	math-utils.f90	/^module math_utils$/;"	m
+random_complex32	array-math/generators/random_fypp.f90	/^  subroutine random_complex32(/;"	s	module:m_random_templates
+random_complex64	array-math/generators/random_fypp.f90	/^  subroutine random_complex64(/;"	s	module:m_random_templates
+random_integer32	array-math/generators/random_fypp.f90	/^  subroutine random_integer32(/;"	s	module:m_random_templates
+random_integer64	array-math/generators/random_fypp.f90	/^  subroutine random_integer64(/;"	s	module:m_random_templates
+random_rank0_complex32	array-math/generators/random.f90	/^  function random_rank0_complex32(/;"	f	module:m_random
+random_rank0_complex64	array-math/generators/random.f90	/^  function random_rank0_complex64(/;"	f	module:m_random
+random_rank0_integer32	array-math/generators/random.f90	/^  function random_rank0_integer32(/;"	f	module:m_random
+random_rank0_integer64	array-math/generators/random.f90	/^  function random_rank0_integer64(/;"	f	module:m_random
+random_rank0_real32	array-math/generators/random.f90	/^  function random_rank0_real32(/;"	f	module:m_random
+random_rank0_real64	array-math/generators/random.f90	/^  function random_rank0_real64(/;"	f	module:m_random
+random_rank2_complex32	array-math/generators/random.f90	/^  function random_rank2_complex32(/;"	f	module:m_random
+random_rank2_complex64	array-math/generators/random.f90	/^  function random_rank2_complex64(/;"	f	module:m_random
+random_rank2_integer32	array-math/generators/random.f90	/^  function random_rank2_integer32(/;"	f	module:m_random
+random_rank2_integer64	array-math/generators/random.f90	/^  function random_rank2_integer64(/;"	f	module:m_random
+random_rank2_real32	array-math/generators/random.f90	/^  function random_rank2_real32(/;"	f	module:m_random
+random_rank2_real64	array-math/generators/random.f90	/^  function random_rank2_real64(/;"	f	module:m_random
+random_real32	array-math/generators/random_fypp.f90	/^  subroutine random_real32(/;"	s	module:m_random_templates
+random_real64	array-math/generators/random_fypp.f90	/^  subroutine random_real64(/;"	s	module:m_random_templates
+random_square_complex32	array-math/generators/random.f90	/^  function random_square_complex32(/;"	f	module:m_random
+random_square_complex64	array-math/generators/random.f90	/^  function random_square_complex64(/;"	f	module:m_random
+random_square_integer32	array-math/generators/random.f90	/^  function random_square_integer32(/;"	f	module:m_random
+random_square_integer64	array-math/generators/random.f90	/^  function random_square_integer64(/;"	f	module:m_random
+random_square_real32	array-math/generators/random.f90	/^  function random_square_real32(/;"	f	module:m_random
+random_square_real64	array-math/generators/random.f90	/^  function random_square_real64(/;"	f	module:m_random
 say_hello	math-utils.f90	/^  subroutine say_hello$/;"	s	module:math_utils
 subarray_in_flattened	array-math/helpers/subarrays.f90	/^  pure function subarray_in_flattened(/;"	f	module:m_subarrays
