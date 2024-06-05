@@ -84,7 +84,7 @@ contains
   !:: real32
   !:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   function random_rank0_real32( like, interval ) result( s )
-    real(kind=int32), intent(in) :: like
+    real(kind=real32), intent(in) :: like
     real(kind=kind(like)), optional, intent(in) :: interval(2)
     real(kind=kind(like)) :: s
     real(kind=kind(like)) :: mat(1)
@@ -93,7 +93,7 @@ contains
   end function random_rank0_real32
   function random_rank2_real32( m, n, like, interval ) result( mat )
     integer, intent(in) :: m, n
-    real(kind=int32), intent(in) :: like
+    real(kind=real32), intent(in) :: like
     real(kind=kind(like)), optional, intent(in) :: interval(2)
     real(kind=kind(like)), allocatable :: mat(:,:)
     allocate( mat(m, n) )
@@ -101,7 +101,7 @@ contains
   end function random_rank2_real32
   function random_square_real32( n, like, interval ) result( mat )
     integer, intent(in) :: n
-    real(kind=int32), intent(in) :: like
+    real(kind=real32), intent(in) :: like
     real(kind=kind(like)), optional, intent(in) :: interval(2)
     real(kind=kind(like)), allocatable :: mat(:,:)
     mat = random_rank2_real32( n, n, like, interval=interval )
@@ -111,7 +111,7 @@ contains
   !:: real64
   !:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   function random_rank0_real64( like, interval ) result( s )
-    real(kind=int64), intent(in) :: like
+    real(kind=real64), intent(in) :: like
     real(kind=kind(like)), optional, intent(in) :: interval(2)
     real(kind=kind(like)) :: s
     real(kind=kind(like)) :: mat(1)
@@ -120,7 +120,7 @@ contains
   end function random_rank0_real64
   function random_rank2_real64( m, n, like, interval ) result( mat )
     integer, intent(in) :: m, n
-    real(kind=int64), intent(in) :: like
+    real(kind=real64), intent(in) :: like
     real(kind=kind(like)), optional, intent(in) :: interval(2)
     real(kind=kind(like)), allocatable :: mat(:,:)
     allocate( mat(m, n) )
@@ -128,7 +128,7 @@ contains
   end function random_rank2_real64
   function random_square_real64( n, like, interval ) result( mat )
     integer, intent(in) :: n
-    real(kind=int64), intent(in) :: like
+    real(kind=real64), intent(in) :: like
     real(kind=kind(like)), optional, intent(in) :: interval(2)
     real(kind=kind(like)), allocatable :: mat(:,:)
     mat = random_rank2_real64( n, n, like, interval=interval )
@@ -138,7 +138,7 @@ contains
   !:: complex32
   !:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   function random_rank0_complex32( like, interval ) result( s )
-    complex(kind=int32), intent(in) :: like
+    complex(kind=real32), intent(in) :: like
     complex(kind=kind(like)), optional, intent(in) :: interval(2)
     complex(kind=kind(like)) :: s
     complex(kind=kind(like)) :: mat(1)
@@ -147,7 +147,7 @@ contains
   end function random_rank0_complex32
   function random_rank2_complex32( m, n, like, interval ) result( mat )
     integer, intent(in) :: m, n
-    complex(kind=int32), intent(in) :: like
+    complex(kind=real32), intent(in) :: like
     complex(kind=kind(like)), optional, intent(in) :: interval(2)
     complex(kind=kind(like)), allocatable :: mat(:,:)
     allocate( mat(m, n) )
@@ -155,7 +155,7 @@ contains
   end function random_rank2_complex32
   function random_square_complex32( n, like, interval ) result( mat )
     integer, intent(in) :: n
-    complex(kind=int32), intent(in) :: like
+    complex(kind=real32), intent(in) :: like
     complex(kind=kind(like)), optional, intent(in) :: interval(2)
     complex(kind=kind(like)), allocatable :: mat(:,:)
     mat = random_rank2_complex32( n, n, like, interval=interval )
@@ -165,7 +165,7 @@ contains
   !:: complex64
   !:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   function random_rank0_complex64( like, interval ) result( s )
-    complex(kind=int64), intent(in) :: like
+    complex(kind=real64), intent(in) :: like
     complex(kind=kind(like)), optional, intent(in) :: interval(2)
     complex(kind=kind(like)) :: s
     complex(kind=kind(like)) :: mat(1)
@@ -174,7 +174,7 @@ contains
   end function random_rank0_complex64
   function random_rank2_complex64( m, n, like, interval ) result( mat )
     integer, intent(in) :: m, n
-    complex(kind=int64), intent(in) :: like
+    complex(kind=real64), intent(in) :: like
     complex(kind=kind(like)), optional, intent(in) :: interval(2)
     complex(kind=kind(like)), allocatable :: mat(:,:)
     allocate( mat(m, n) )
@@ -182,7 +182,7 @@ contains
   end function random_rank2_complex64
   function random_square_complex64( n, like, interval ) result( mat )
     integer, intent(in) :: n
-    complex(kind=int64), intent(in) :: like
+    complex(kind=real64), intent(in) :: like
     complex(kind=kind(like)), optional, intent(in) :: interval(2)
     complex(kind=kind(like)), allocatable :: mat(:,:)
     mat = random_rank2_complex64( n, n, like, interval=interval )

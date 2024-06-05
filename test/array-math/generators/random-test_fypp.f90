@@ -4,7 +4,7 @@
 ! This file has been created by the fypp preprocessor. DO NOT MODIFY THIS FILE!
 ! Implement changes in the original preprocessed file.
 ! original file ::       test/array-math/generators/random-test.f90.fpp
-! preprocessing time ::  2024-05-31 10:36:32 UTC+0200
+! preprocessing time ::  2024-06-04 23:20:38 UTC+0200
 !
 !END FYPP HEADER================================================================
 !> Unit tests for [[m_random(module)]].

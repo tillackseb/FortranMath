@@ -22,6 +22,24 @@ ZERO_INTEGER32	math-constants.f90	/^  integer(kind=int32), parameter    :: ZERO_
 ZERO_INTEGER64	math-constants.f90	/^  integer(kind=int64), parameter    :: ZERO_INTEGER64 /;"	v	module:math_constants
 ZERO_REAL32	math-constants.f90	/^  real(kind=real32), parameter      :: ZERO_REAL32 /;"	v	module:math_constants
 ZERO_REAL64	math-constants.f90	/^  real(kind=real64), parameter      :: ZERO_REAL64 /;"	v	module:math_constants
+allsame_complex32	array-math/generators/allsame_fypp.f90	/^  pure subroutine allsame_complex32(/;"	s	module:m_allsame_templates
+allsame_complex64	array-math/generators/allsame_fypp.f90	/^  pure subroutine allsame_complex64(/;"	s	module:m_allsame_templates
+allsame_integer32	array-math/generators/allsame_fypp.f90	/^  pure subroutine allsame_integer32(/;"	s	module:m_allsame_templates
+allsame_integer64	array-math/generators/allsame_fypp.f90	/^  pure subroutine allsame_integer64(/;"	s	module:m_allsame_templates
+allsame_rank2_complex32	array-math/generators/allsame.f90	/^  pure function allsame_rank2_complex32(/;"	f	module:m_allsame
+allsame_rank2_complex64	array-math/generators/allsame.f90	/^  pure function allsame_rank2_complex64(/;"	f	module:m_allsame
+allsame_rank2_integer32	array-math/generators/allsame.f90	/^  pure function allsame_rank2_integer32(/;"	f	module:m_allsame
+allsame_rank2_integer64	array-math/generators/allsame.f90	/^  pure function allsame_rank2_integer64(/;"	f	module:m_allsame
+allsame_rank2_real32	array-math/generators/allsame.f90	/^  pure function allsame_rank2_real32(/;"	f	module:m_allsame
+allsame_rank2_real64	array-math/generators/allsame.f90	/^  pure function allsame_rank2_real64(/;"	f	module:m_allsame
+allsame_real32	array-math/generators/allsame_fypp.f90	/^  pure subroutine allsame_real32(/;"	s	module:m_allsame_templates
+allsame_real64	array-math/generators/allsame_fypp.f90	/^  pure subroutine allsame_real64(/;"	s	module:m_allsame_templates
+allsame_square_complex32	array-math/generators/allsame.f90	/^  pure function allsame_square_complex32(/;"	f	module:m_allsame
+allsame_square_complex64	array-math/generators/allsame.f90	/^  pure function allsame_square_complex64(/;"	f	module:m_allsame
+allsame_square_integer32	array-math/generators/allsame.f90	/^  pure function allsame_square_integer32(/;"	f	module:m_allsame
+allsame_square_integer64	array-math/generators/allsame.f90	/^  pure function allsame_square_integer64(/;"	f	module:m_allsame
+allsame_square_real32	array-math/generators/allsame.f90	/^  pure function allsame_square_real32(/;"	f	module:m_allsame
+allsame_square_real64	array-math/generators/allsame.f90	/^  pure function allsame_square_real64(/;"	f	module:m_allsame
 array_generators	array-math/generators/array-generators.f90	/^module array_generators$/;"	m
 diagonal_in_flattened	array-math/helpers/subarrays.f90	/^  pure function diagonal_in_flattened(/;"	f	module:m_subarrays
 fill_random_complex32	array-math/generators/random_fypp.f90	/^  subroutine fill_random_complex32(/;"	s	module:m_random_templates
@@ -34,28 +52,49 @@ identity_complex32	array-math/generators/identity_fypp.f90	/^  pure subroutine i
 identity_complex64	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_complex64(/;"	s	module:m_identity_templates
 identity_integer32	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_integer32(/;"	s	module:m_identity_templates
 identity_integer64	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_integer64(/;"	s	module:m_identity_templates
+identity_rank0_complex32	array-math/generators/diagonal.f90	/^  pure function identity_rank0_complex32(/;"	f	module:m_identity
 identity_rank0_complex32	array-math/generators/identity.f90	/^  pure function identity_rank0_complex32(/;"	f	module:m_identity
+identity_rank0_complex64	array-math/generators/diagonal.f90	/^  pure function identity_rank0_complex64(/;"	f	module:m_identity
 identity_rank0_complex64	array-math/generators/identity.f90	/^  pure function identity_rank0_complex64(/;"	f	module:m_identity
+identity_rank0_integer32	array-math/generators/diagonal.f90	/^  pure function identity_rank0_integer32(/;"	f	module:m_identity
 identity_rank0_integer32	array-math/generators/identity.f90	/^  pure function identity_rank0_integer32(/;"	f	module:m_identity
+identity_rank0_integer64	array-math/generators/diagonal.f90	/^  pure function identity_rank0_integer64(/;"	f	module:m_identity
 identity_rank0_integer64	array-math/generators/identity.f90	/^  pure function identity_rank0_integer64(/;"	f	module:m_identity
+identity_rank0_real32	array-math/generators/diagonal.f90	/^  pure function identity_rank0_real32(/;"	f	module:m_identity
 identity_rank0_real32	array-math/generators/identity.f90	/^  pure function identity_rank0_real32(/;"	f	module:m_identity
+identity_rank0_real64	array-math/generators/diagonal.f90	/^  pure function identity_rank0_real64(/;"	f	module:m_identity
 identity_rank0_real64	array-math/generators/identity.f90	/^  pure function identity_rank0_real64(/;"	f	module:m_identity
+identity_rank2_complex32	array-math/generators/diagonal.f90	/^  pure function identity_rank2_complex32(/;"	f	module:m_identity
 identity_rank2_complex32	array-math/generators/identity.f90	/^  pure function identity_rank2_complex32(/;"	f	module:m_identity
+identity_rank2_complex64	array-math/generators/diagonal.f90	/^  pure function identity_rank2_complex64(/;"	f	module:m_identity
 identity_rank2_complex64	array-math/generators/identity.f90	/^  pure function identity_rank2_complex64(/;"	f	module:m_identity
+identity_rank2_integer32	array-math/generators/diagonal.f90	/^  pure function identity_rank2_integer32(/;"	f	module:m_identity
 identity_rank2_integer32	array-math/generators/identity.f90	/^  pure function identity_rank2_integer32(/;"	f	module:m_identity
+identity_rank2_integer64	array-math/generators/diagonal.f90	/^  pure function identity_rank2_integer64(/;"	f	module:m_identity
 identity_rank2_integer64	array-math/generators/identity.f90	/^  pure function identity_rank2_integer64(/;"	f	module:m_identity
+identity_rank2_real32	array-math/generators/diagonal.f90	/^  pure function identity_rank2_real32(/;"	f	module:m_identity
 identity_rank2_real32	array-math/generators/identity.f90	/^  pure function identity_rank2_real32(/;"	f	module:m_identity
+identity_rank2_real64	array-math/generators/diagonal.f90	/^  pure function identity_rank2_real64(/;"	f	module:m_identity
 identity_rank2_real64	array-math/generators/identity.f90	/^  pure function identity_rank2_real64(/;"	f	module:m_identity
 identity_real32	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_real32(/;"	s	module:m_identity_templates
 identity_real64	array-math/generators/identity_fypp.f90	/^  pure subroutine identity_real64(/;"	s	module:m_identity_templates
+identity_square_complex32	array-math/generators/diagonal.f90	/^  pure function identity_square_complex32(/;"	f	module:m_identity
 identity_square_complex32	array-math/generators/identity.f90	/^  pure function identity_square_complex32(/;"	f	module:m_identity
+identity_square_complex64	array-math/generators/diagonal.f90	/^  pure function identity_square_complex64(/;"	f	module:m_identity
 identity_square_complex64	array-math/generators/identity.f90	/^  pure function identity_square_complex64(/;"	f	module:m_identity
+identity_square_integer32	array-math/generators/diagonal.f90	/^  pure function identity_square_integer32(/;"	f	module:m_identity
 identity_square_integer32	array-math/generators/identity.f90	/^  pure function identity_square_integer32(/;"	f	module:m_identity
+identity_square_integer64	array-math/generators/diagonal.f90	/^  pure function identity_square_integer64(/;"	f	module:m_identity
 identity_square_integer64	array-math/generators/identity.f90	/^  pure function identity_square_integer64(/;"	f	module:m_identity
+identity_square_real32	array-math/generators/diagonal.f90	/^  pure function identity_square_real32(/;"	f	module:m_identity
 identity_square_real32	array-math/generators/identity.f90	/^  pure function identity_square_real32(/;"	f	module:m_identity
+identity_square_real64	array-math/generators/diagonal.f90	/^  pure function identity_square_real64(/;"	f	module:m_identity
 identity_square_real64	array-math/generators/identity.f90	/^  pure function identity_square_real64(/;"	f	module:m_identity
 index_from_flattened	array-math/helpers/subarrays.f90	/^  pure function index_from_flattened(/;"	f	module:m_subarrays
 index_to_flattened	array-math/helpers/subarrays.f90	/^  pure function index_to_flattened(/;"	f	module:m_subarrays
+m_allsame	array-math/generators/allsame.f90	/^module m_allsame$/;"	m
+m_allsame_templates	array-math/generators/allsame_fypp.f90	/^module m_allsame_templates$/;"	m
+m_identity	array-math/generators/diagonal.f90	/^module m_identity$/;"	m
 m_identity	array-math/generators/identity.f90	/^module m_identity$/;"	m
 m_identity_templates	array-math/generators/identity_fypp.f90	/^module m_identity_templates$/;"	m
 m_random	array-math/generators/random.f90	/^module m_random$/;"	m
@@ -63,6 +102,18 @@ m_random_templates	array-math/generators/random_fypp.f90	/^module m_random_templ
 m_subarrays	array-math/helpers/subarrays.f90	/^module m_subarrays$/;"	m
 math_constants	math-constants.f90	/^module math_constants$/;"	m
 math_utils	math-utils.f90	/^module math_utils$/;"	m
+ones_rank2_complex32	array-math/generators/allsame.f90	/^  pure function ones_rank2_complex32(/;"	f	module:m_allsame
+ones_rank2_complex64	array-math/generators/allsame.f90	/^  pure function ones_rank2_complex64(/;"	f	module:m_allsame
+ones_rank2_integer32	array-math/generators/allsame.f90	/^  pure function ones_rank2_integer32(/;"	f	module:m_allsame
+ones_rank2_integer64	array-math/generators/allsame.f90	/^  pure function ones_rank2_integer64(/;"	f	module:m_allsame
+ones_rank2_real32	array-math/generators/allsame.f90	/^  pure function ones_rank2_real32(/;"	f	module:m_allsame
+ones_rank2_real64	array-math/generators/allsame.f90	/^  pure function ones_rank2_real64(/;"	f	module:m_allsame
+ones_square_complex32	array-math/generators/allsame.f90	/^  pure function ones_square_complex32(/;"	f	module:m_allsame
+ones_square_complex64	array-math/generators/allsame.f90	/^  pure function ones_square_complex64(/;"	f	module:m_allsame
+ones_square_integer32	array-math/generators/allsame.f90	/^  pure function ones_square_integer32(/;"	f	module:m_allsame
+ones_square_integer64	array-math/generators/allsame.f90	/^  pure function ones_square_integer64(/;"	f	module:m_allsame
+ones_square_real32	array-math/generators/allsame.f90	/^  pure function ones_square_real32(/;"	f	module:m_allsame
+ones_square_real64	array-math/generators/allsame.f90	/^  pure function ones_square_real64(/;"	f	module:m_allsame
 random_complex32	array-math/generators/random_fypp.f90	/^  subroutine random_complex32(/;"	s	module:m_random_templates
 random_complex64	array-math/generators/random_fypp.f90	/^  subroutine random_complex64(/;"	s	module:m_random_templates
 random_integer32	array-math/generators/random_fypp.f90	/^  subroutine random_integer32(/;"	s	module:m_random_templates
@@ -89,3 +140,15 @@ random_square_real32	array-math/generators/random.f90	/^  function random_square
 random_square_real64	array-math/generators/random.f90	/^  function random_square_real64(/;"	f	module:m_random
 say_hello	math-utils.f90	/^  subroutine say_hello$/;"	s	module:math_utils
 subarray_in_flattened	array-math/helpers/subarrays.f90	/^  pure function subarray_in_flattened(/;"	f	module:m_subarrays
+zeros_rank2_complex32	array-math/generators/allsame.f90	/^  pure function zeros_rank2_complex32(/;"	f	module:m_allsame
+zeros_rank2_complex64	array-math/generators/allsame.f90	/^  pure function zeros_rank2_complex64(/;"	f	module:m_allsame
+zeros_rank2_integer32	array-math/generators/allsame.f90	/^  pure function zeros_rank2_integer32(/;"	f	module:m_allsame
+zeros_rank2_integer64	array-math/generators/allsame.f90	/^  pure function zeros_rank2_integer64(/;"	f	module:m_allsame
+zeros_rank2_real32	array-math/generators/allsame.f90	/^  pure function zeros_rank2_real32(/;"	f	module:m_allsame
+zeros_rank2_real64	array-math/generators/allsame.f90	/^  pure function zeros_rank2_real64(/;"	f	module:m_allsame
+zeros_square_complex32	array-math/generators/allsame.f90	/^  pure function zeros_square_complex32(/;"	f	module:m_allsame
+zeros_square_complex64	array-math/generators/allsame.f90	/^  pure function zeros_square_complex64(/;"	f	module:m_allsame
+zeros_square_integer32	array-math/generators/allsame.f90	/^  pure function zeros_square_integer32(/;"	f	module:m_allsame
+zeros_square_integer64	array-math/generators/allsame.f90	/^  pure function zeros_square_integer64(/;"	f	module:m_allsame
+zeros_square_real32	array-math/generators/allsame.f90	/^  pure function zeros_square_real32(/;"	f	module:m_allsame
+zeros_square_real64	array-math/generators/allsame.f90	/^  pure function zeros_square_real64(/;"	f	module:m_allsame

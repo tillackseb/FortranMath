@@ -83,25 +83,37 @@ contains
   end subroutine fill_random_integer64
 
   subroutine fill_random_real32( A, subidx, interval )
-    real(kind=int32), intent(inout) :: A(*)
+    real(kind=real32), intent(inout) :: A(*)
     integer, intent(in) :: subidx(:)
     real(kind=kind(A)), intent(in) :: interval(2)
 
-    call random_number( A(subidx) )
-    A(subidx) = interval(1) + (interval(2)-interval(1)) * A(subidx)
+    integer :: n
+    real(kind=kind(A)), allocatable :: rand(:)
+
+    n = size( subidx )
+    allocate( rand(n) )
+    call random_number( rand )
+    A(subidx) = interval(1) + (interval(2)-interval(1)) * rand
+    deallocate( rand )
   end subroutine fill_random_real32
 
   subroutine fill_random_real64( A, subidx, interval )
-    real(kind=int64), intent(inout) :: A(*)
+    real(kind=real64), intent(inout) :: A(*)
     integer, intent(in) :: subidx(:)
     real(kind=kind(A)), intent(in) :: interval(2)
 
-    call random_number( A(subidx) )
-    A(subidx) = interval(1) + (interval(2)-interval(1)) * A(subidx)
+    integer :: n
+    real(kind=kind(A)), allocatable :: rand(:)
+
+    n = size( subidx )
+    allocate( rand(n) )
+    call random_number( rand )
+    A(subidx) = interval(1) + (interval(2)-interval(1)) * rand
+    deallocate( rand )
   end subroutine fill_random_real64
 
   subroutine fill_random_complex32( A, subidx, interval )
-    complex(kind=int32), intent(inout) :: A(*)
+    complex(kind=real32), intent(inout) :: A(*)
     integer, intent(in) :: subidx(:)
     complex(kind=kind(A)), intent(in) :: interval(2)
 
@@ -118,7 +130,7 @@ contains
   end subroutine fill_random_complex32
 
   subroutine fill_random_complex64( A, subidx, interval )
-    complex(kind=int64), intent(inout) :: A(*)
+    complex(kind=real64), intent(inout) :: A(*)
     integer, intent(in) :: subidx(:)
     complex(kind=kind(A)), intent(in) :: interval(2)
 
